@@ -45,6 +45,11 @@ describe('POST - cria um usuário', () => {
         expect(response.statusCode).toBe(200);
     });
 
+    it('obter usuario 1 pelo id', async () => {
+        const response = await request(app).get(`/api/users/1`);
+        expect(response.statusCode).toBe(200);
+    });
+
 });
 
 
